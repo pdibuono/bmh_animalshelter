@@ -1,0 +1,1 @@
+web: gunicorn bmh_animalshelter.wsgi --log-file -
