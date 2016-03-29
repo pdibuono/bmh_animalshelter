@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="intro-header">
-    <div class="container">
-        <div class="intro-message">
-            <h1>Bring Me Home</h1>
-            <h3>Connect with Rescued Pets!</h3>
-        </div>
-    </div>
+{% if user.is_authenticated %}
+<div class="jumbotron">
+    <h1>Welcome Back!</h1>
 </div>
+{% else %}
+<div class="jumbotron">
+    <h1>Start Connecting with Rescued Pets!</h1>
+    <p> The Number one place on the internet to start to adoption process</p>
+    <p><a class="btn btn-lg btn-primary" href="{% url 'registration_register' %}">Sign up</a></p>
+</div>
+{% endif %}
 {% endblock %}

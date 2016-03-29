@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+{% block content %} 
+<h1>{{ user_in_view.username }}</h1> 
+<p>Email address: {{ user_in_view.email }}</p> 
+<p>First name: {{ user_in_view.first_name }}</p> 
+<p>Last name: {{ user_in_view.last_name }}</p> 
+<p>Street: {{ user_in_view.street }}</p>
+<p>City: {{ user_in_view.city }}</p>
+<p>State: {{ user_in_view.state }}</p>
+<p>Zip Code: {{ user_in_view.zip_code }}</p>
+<p>Phone Number: {{ user_in_view.phone_number }}</p>
+{% endblock %} 
